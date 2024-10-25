@@ -1,0 +1,23 @@
+<%- include (partials/header.ejs) %>
+<%- include (partials/navbar.ejs) %>
+
+<div class="conteiner">
+    <div class="card">
+        <div class="card-header">
+            <h1>Editar Pedidos</h1>
+            <hr>
+        </div>    
+        <div class="card-body">
+            <form action="/fazenda/update" method="post">
+                <label>Numero:</label>
+                <input type="text" name="numero" id="numero" value="<%= fazenda.numero %>" class="form-control" required>
+                <label>Valor:</label>
+                <input type="text" name="valor" id="valor" value="<%= fazenda.valor %>" class="form-control" required>
+                <input type="hidden" name="id" value="<%= fazenda.id %>">
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<%- include ('partials/footer.ejs') %>

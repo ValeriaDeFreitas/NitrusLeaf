@@ -1,0 +1,33 @@
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/navbar.ejs') %>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h1>Fazenda</h1>
+            </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Número:</th>
+                            <th>Valor:</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% fazenda.forEach(fazenda => { %>
+                        <tr>
+                            <td><img src="imgs/order.png" width="30px"></td>
+                            <td><%= fazenda.numero %></td>
+                            <td><%= fazenda.valor.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}) %></td>
+                            <td><a style = "color: orange;" href="/fazenda/edit/<%= fazenda.id %>">Editar</a></td>
+                            <td><a style = "color: red " href="/fazenda/delete/<%= pedidos.id %>" onclick="return confirm('Deseja realmente deletar o fazenda <%= fazenda.numero %>')">Deletar</a></td>
+                        </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+<%- include ('partials/footer.ejs') %>
