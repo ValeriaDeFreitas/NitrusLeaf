@@ -19,5 +19,5 @@ const Histal = connection.define('histal', {
     }
 });
 //Não força a criação da tabela caso já exista
-Pedido.sync({ force: false })
+Histal.sync({ force: false })
 export default Histal;

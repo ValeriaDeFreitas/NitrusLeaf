@@ -15,16 +15,26 @@ router.get("/cadastro", (req, res) =>{
 })
 //ROTA DE CRIAÇÃO DE USUARIOS 
 router.post("/createUser", (req,res)=>{
-     const email = req.body.email;
-     const password = req.body.password;
+    const nome = req.body.nome;
+    const telefone = req.body.telefone;
+    const email = req.body.email;
+    const senha = req.body.senha;
+    const sobrenome = req.body.sobrenome;
+    const celular = req.body.celular;
+    const confirmarSenha = req.body.confirmarSenha;
     User.findOne({where:{email:email}}).then((user)=>{
         if(user == undefined){
             //AQUI É FEITO O CADASTRO E O HASH DE SENHA
             const salt =bcrypt.genSaltSync(10)
-            const hash =bcrypt.hashSync(password, salt)
+            const hash =bcrypt.hashSync(senha, salt)
             User.create({
+                nome:nome,
+                telefone:telefone,
                 email:email,
-                password:hash,
+                senha:hash,
+                sobrenome:sobrenome,
+                celular:celular,
+                confirmarSenha:confirmarSenha
             }).then(() => {
                 res.redirect("/login");
             });
@@ -37,8 +47,13 @@ router.post("/createUser", (req,res)=>{
     });
 
      User.create({
+        nome:nome,
+        telefone:telefone,
         email:email,
-        password:password,
+        senha:hash,
+        sobrenome:sobrenome,
+        celular:celular,
+        confirmarSenha:confirmarSenha
      }).then(()=>{
         res,redirect("/login");
      })
@@ -46,12 +61,22 @@ router.post("/createUser", (req,res)=>{
 
 //ROTA DE AUTENTICAÇÃO
 router.post("/authenticate", (req, res) => {
+    const nome = req.body.nome;
+    const telefone = req.body.telefone;
     const email = req.body.email;
-    const password = req.bodi.password;
-
+    const senha = req.body.senha;
+    const sobrenome = req.body.sobrenome;
+    const celular = req.body.celular;
+    const confirmarSenha = req.body.confirmarSenha;
     User.findOne({
         where:{
-            email:email
+        nome:nome,
+        telefone:telefone,
+        email:email,
+        senha:hash,
+        sobrenome:sobrenome,
+        celular:celular,
+        confirmarSenha:confirmarSenha
         },
     }).then(user =>{
         if(user != undefined){

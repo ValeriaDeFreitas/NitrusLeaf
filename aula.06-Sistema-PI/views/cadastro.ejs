@@ -4,17 +4,32 @@
 <div class="conteiner">
     <div class="card mt-4">
         <div class="card-header">
-            <h2>Cadastro de Uusário</h2>
+            <h2>Cadastrar</h2>
         </div>
         <div class="card-body">
             <form action="/createUser" method="post">
+                <label>Nome:</label>
+                <input class="form-control" type="nome" name="nome" placeholder="Digite seu nome" required>
+                <br>
+                <label>Telefone:</label>
+                <input class="form-control" type="telefone" name="telefone" placeholder="Insira seu telefone" required>
+                <br>
                 <label>E-mail:</label>
-                <input class="form-control" type="email" name="email" placeholder="email@exemplo.com" required>
+                <input class="form-control" type="sobrenome" name="email" placeholder="email@exemplo.com" required>
                 <br>
                 <label>Senha:</label>
                 <input class="form-control" type="password" name="password" placeholder="Insira uma senha com no mínimo 8 caracteres" required>
                 <br>
-                <input type="submit" value="Cadastrar" class="btn btn-success btn-block">
+                <label>Sobrenome:</label>
+                <input class="form-control" type="sobrenome" name="sobrenome" placeholder="sobrenome" required>
+                <br>
+                <label>Celular:</label>
+                <input class="form-control" type="celular" name="celular" placeholder="Insira um número de celular" required>
+                <br>
+                <label>Confirmar senha:</label>
+                <input class="form-control" type="password" name="password" placeholder="Confirme sua senha" required>
+                <br>
+                <input type="submit" value="Próximo" class="btn btn-success btn-block">
             </form>
             <hr>
             <h6>Já possui conta?<a href="/login">Faça o login</a></h6>

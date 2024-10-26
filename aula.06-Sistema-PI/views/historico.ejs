@@ -15,13 +15,13 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <% fazenda.forEach(fazenda => { %>
+                        <% historico.forEach(historico => { %>
                         <tr>
                             <td><img src="imgs/order.png" width="30px"></td>
-                            <td><%= fazenda.numero %></td>
-                            <td><%= fazenda.valor.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}) %></td>
-                            <td><a style = "color: orange;" href="/fazenda/edit/<%= fazenda.id %>">Editar</a></td>
-                            <td><a style = "color: red " href="/fazenda/delete/<%= pedidos.id %>" onclick="return confirm('Deseja realmente deletar o fazenda <%= fazenda.numero %>')">Deletar</a></td>
+                            <td><%= historico.talhao %></td>
+                            <td><%= historico.descricao %></td>
+                            <td><a style = "color: orange;" href="/historico/edit/<%= historico.id %>">Editar</a></td>
+                            <td><a style = "color: red " href="/historico/delete/<%= historico.id %>" onclick="return confirm('Deseja realmente deletar o fazenda <%= fazenda.numero %>')">Deletar</a></td>
                         </tr>
                         <% }) %>
                     </tbody>

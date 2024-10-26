@@ -5,10 +5,12 @@ const app = express();
 //Importando o sequelize (com os dados da execução)
 import connection from './config/sequelize-config.js'
 // Importando os Controllers (onde estão as rotas) 
-import ClientesController from "./controllers/FazendasController.js" 
-import ProdutosController from "./controllers/ProdutoresController.js" 
-import PedidosController from "./controllers/TalhoesController.js"
+
+import HistoricoController from "./controllers/HistoricoController.js"
+import HisTalController from "./controllers/HisTalController.js"
+import TalhoesController from "./controllers/TalhoesController.js"
 import UsersController from "./controllers/UsersController.js"
+import UsuariosController from "./controllers/UsuariosController.js"
 
 
 app.use(express.urlencoded({extended: false}))
@@ -33,10 +35,11 @@ app.set('view engine', 'ejs')
 app.use(express.static('public'))
 
 // Definindo o uso das rotas dos Controllers
-app.use("/", FazendasController)
-app.use("/", ProdutoresController)
+app.use("/", HisTalController)
+app.use("/", HistoricoController)
 app.use("/", TalhoesController)
 app.use("/", UsersController)
+app.use("/", UsuariosController)
 
 // ROTA PRINCIPAL
 app.get("/",function(req,res){

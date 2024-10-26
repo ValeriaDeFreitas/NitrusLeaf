@@ -4,15 +4,15 @@
 <div class="conteiner">
     <div class="card">
         <div class="card-header">
-            <h1>Editar Pedidos</h1>
+            <h1>Editar Histórico</h1>
             <hr>
         </div>    
         <div class="card-body">
-            <form action="/fazenda/update" method="post">
-                <label>Numero:</label>
-                <input type="text" name="numero" id="numero" value="<%= fazenda.numero %>" class="form-control" required>
-                <label>Valor:</label>
-                <input type="text" name="valor" id="valor" value="<%= fazenda.valor %>" class="form-control" required>
+            <form action="/historico/update" method="post">
+                <label>Talhão:</label>
+                <input type="text" name="talhoes" id="talhoes" value="<%= historico.talhoes >" class="form-control" required>
+                <label>Descrição:</label>
+                <input type="text" name="descricao" id="descricao" value="<%= historico.descricao%>" class="form-control" required>
                 <input type="hidden" name="id" value="<%= fazenda.id %>">
             </form>
         </div>

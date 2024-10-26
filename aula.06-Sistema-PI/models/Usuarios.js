@@ -1,36 +1,34 @@
 import sequelize from "sequelize";
 import connection from "../config/sequelize-config.js";
 
-const User = connection.define('users', {
-    nome:{
+const Usuarios = connection.define('usuarios', {
+    tipoPessoa:{
         type: sequelize.STRING,
         allowNull:false
     },
-    telefone:{
-        type: sequelize.INTEGER,
-        allowNull:false
-    },
-    email:{
+    cpf:{
         type: sequelize.STRING,
         allowNull:false
     },
-    senha:{
+    logradouro:{
         type: sequelize.STRING,
         allowNull:false
     },
-    sobrenome:{
+    numero:{
         type: sequelize.STRING,
         allowNull:false
     },
-    celular:{
-        type: sequelize.INTEGER,
-        allowNull:false
-    },
-    confirmarSenha:{
+    bairro:{
         type: sequelize.STRING,
         allowNull:false
-    }
+    },
+    cidade:{
+        type: sequelize.STRING,
+        allowNull:false
+    },
+    
+
 })
 
-User.sync({force:false});
-export default User;
+Usuarios.sync({force:false});
+export default Usuarios;

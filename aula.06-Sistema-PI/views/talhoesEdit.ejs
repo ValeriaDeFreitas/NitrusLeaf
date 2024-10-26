@@ -10,15 +10,13 @@
         </div>
         <div class="card-body">
             <form action="/clientes/update" method="post">
-                <label>Nome do cliente:</label>
-                <input type="text" name="nome" id="nome" value="<%= cliente.nome %>" class="form-control" required>
-                <label>Cpf do cliente:</label>
-                <input type="text" name="cpf" id="cpf" value="<%= cliente.cpf %>" class="form-control" required>
-                <label>Endereço do cliente:</label>
-                <input type="text" name="endereco" id="endereco" value="<%= cliente.endereco %>" class="form-control" required>
-                <input type="hidden" name="id" value="<%= cliente.id %>">
+                <label>Nome Talhão :</label>
+                <input type="text" name="nome" id="nome" value="<%= talhoes.nome %>" class="form-control" required>
+                <label>Nome Pé :</label>
+                <input type="text" name="cpf" id="cpf" value="<%= talhoes.cpf %>" class="form-control" required>
+                <input type="hidden" name="id" value="<%= talhoes.id %>">
                 <br>
-                <input type="submit" class="btn btn-warning" value="Alterar" onclick="return confirm('Deseja realmente alterar o cliente <%= cliente.nome %>?')">
+                <input type="submit" class="btn btn-warning" value="Alterar" onclick="return confirm('Deseja realmente alterar as informações do talhão <%= talhoes.nome %>?')">
             </form>
             <hr>
         </div>

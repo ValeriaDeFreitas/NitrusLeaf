@@ -4,25 +4,22 @@
         <div class="container">
             <div class="card">
                 <div class="card-header">
-                    <h1>Editar Produto</h1>
+                    <h1>Editar Talhão</h1>
                     <hr>
                 </div>
                 <div class="card-body">
-                    <form action="/produtos/update" method="post">
+                    <form action="/histal/update" method="post">
 
-                        <label>Nome do Produto:</label>
-                        <input class="form-control" type="text" name="nome" id="nome" value="<%= produto.nome %>"
+                        <label>Nome do pé:</label>
+                        <input class="form-control" type="text" name="nome" id="nome" value="<%= histal.pe %>"
                             required>
 
-                        <label>Preço do Produto</label>
-                        <input class="form-control" type="text" name="preco" id="preco" value="<%= produto.preco %>"
+                      <!--Procura uma inout para o status --> 
+                       <!-- <input class="form-control" type="text" name="preco" id="preco" value="<%= produto.preco %>"
                             required>
+-->
 
-                        <label>Categoria Produto</label>
-                        <input class="form-control" type="text" name="categoria" id="categoria"
-                            value="<%= produto.categoria %>" required>
-
-                        <input type="hidden" name="id" id="id" value="<%= produto.id %>">
+                        <input type="hidden" name="id" id="id" value="<%= histal.id %>">
                         <br>
 
                         <input type="submit" class="btn btn-warning" value="Alterar"
