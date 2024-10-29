@@ -1,5 +1,5 @@
 body {
-    background-color: #f1f1f1;
+    background-color: #FAF0D7;
 }
 
 ul {
@@ -19,4 +19,9 @@ th, td {
 
 footer {
     text-align: center;    
+}
+
+#bg-all{
+    background-color: #FAF0D7;
+
 }
