@@ -49,6 +49,12 @@ footer {
 
 }
 
+#navbar-btns{
+    display: flex;
+    justify-content: flex-end; /* Alinha os itens para o final da linha */
+    align-items: center;
+}
+
 #img-logo{
     width: 160px; 
     height: auto;
