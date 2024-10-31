@@ -1,10 +1,12 @@
 <%- include ('partials/header.ejs') %>
 <%- include ('partials/navbar.ejs') %>
+
 <!--
+
     <div class="container">
         <div class="card">
             <div class="card-header">
-                <h1>Histórico</h1>
+                <h1>Deficiencia</h1>
             </div>
                 <table>
                     <thead>
@@ -15,13 +17,13 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <% historico.forEach(historico => { %>
+                        <% deficiencia.forEach(deficiencia => { %>
                         <tr>
                             <td><img src="imgs/order.png" width="30px"></td>
-                            <td><%= historico.talhao %></td>
-                            <td><%= historico.descricao %></td>
-                            <td><a style = "color: orange;" href="/historico/edit/<%= historico.id %>">Editar</a></td>
-                            <td><a style = "color: red " href="/historico/delete/<%= historico.id %>" onclick="return confirm('Deseja realmente deletar o fazenda <%= fazenda.numero %>')">Deletar</a></td>
+                            <td><%= deficiencia.p %></td>
+                            <td><%= deficiencia.s %></td>
+                            <td><a style = "color: orange;" href="/deficiencia/edit/<%= deficiencia.id %>">Editar</a></td>
+                            <td><a style = "color: red " href="/deficiencia/delete/<%= deficiencia.id %>" onclick="return confirm('Deseja realmente deletar  <%= deficiencia.id %>')">Deletar</a></td>
                         </tr>
                         <% }) %>
                     </tbody>
@@ -29,5 +31,7 @@
             </div>
         </div>
     </div>
+
 -->
+
 <%- include ('partials/footer.ejs') %>

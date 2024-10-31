@@ -22,22 +22,3 @@ nomePe:{
 //Não força a criação da tabela caso já exista
 Talhoes.sync({force: false})
 export default Talhoes;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
