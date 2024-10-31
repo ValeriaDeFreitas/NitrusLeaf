@@ -1,5 +1,14 @@
+:root{
+    --cor-fundo-bege: #FAF0D7;
+    --cor-fundo-cor: #FFB534;
+    --verde-escuro: #49A010;
+    --verde-bege: #65B741;
+    --texto-marrom: #351102;
+    --preto: #000000;
+}
+
 body {
-    background-color: #FAF0D7;
+    background-color: var(--cor-fundo-bege);
 }
 
 ul {
@@ -18,10 +27,11 @@ th, td {
 }
 
 footer {
+    background-color: var(--cor-fundo-bege);
     text-align: center;    
 }
 
 #bg-all{
-    background-color: #FAF0D7;
+    background-color: var(--cor-fundo-bege);
 
 }

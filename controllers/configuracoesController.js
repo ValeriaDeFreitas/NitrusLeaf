@@ -3,13 +3,14 @@ import Configuracoes from "../models/Configuracoes.js"
 
 const router = express.Router()
 
-// ROTA HISTAL
 router.get("/configuracoes", function (req, res) {
     Configuracoes.findAll().then(configuracoes => {
         res.render("configuracoes", { configuracoes: configuracoes })
     })
 
 })
+
+// ROTA CONFIGURAÇÕES
 router.post("/configuracoes/new", function (req, res) {
     try {
         const configuracoesDados = req.body;
@@ -21,6 +22,7 @@ router.post("/configuracoes/new", function (req, res) {
     }
 })
 
+// ROTA APAGAR DADOS PAG CONFIGURAÇÕES
 router.get("/configuracoes/delete/:id", (req, res) => {
     const id = req.params.id
     Configuracoes.destroy({
@@ -32,6 +34,7 @@ router.get("/configuracoes/delete/:id", (req, res) => {
     })
 })
 
+// ROTA ALTERAR DADOS PAG CONFIGURAÇÕES
 router.get("/configuracoes/edit/:id", (req, res) => {
     const id = req.params.id
     Configuracoes.findByPk(id).then(function (configuracoes) {
@@ -41,6 +44,7 @@ router.get("/configuracoes/edit/:id", (req, res) => {
     })
 })
 
+// ROTA UPDATE ALTERAÇÕES DADOS PAG. CONFIGURAÇÕES
 router.post("/configuracoes/update/:id", (req, res) => {
     const id = req.params.id
     const nome = req.params.nome

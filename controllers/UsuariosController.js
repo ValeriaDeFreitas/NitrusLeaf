@@ -4,15 +4,16 @@ import Usuarios from "../models/Usuarios.js";
 import bcrypt from "bcrypt";
 import { where } from "sequelize";
 
+// ROTA PRINCIPAL LOGIN
 router.get("/login", (req, res) => {
     res.render("login");
 });
 
 //ROTA DE CADASTRO
-
 router.get("/cadastroUsuarios", (req, res) =>{
     res.render("cadastroUsuarios");
 })
+
 //ROTA DE CRIAÇÃO DE USUARIOS 
 router.post("/createUsuarios", (req,res)=>{
     const tipoPessoa = req.body.tipoPessoa;
