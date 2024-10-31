@@ -7,6 +7,15 @@
     --preto: #000000;
 }
 
+#gradient-bg {
+    height: 200px; /* altura do elemento */
+    background: linear-gradient(to left, #FFB534, #E88239);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o body tenha pelo menos a altura da viewport */
+    margin: 0;
+}
+
 body {
     background-color: var(--cor-fundo-bege);
 }
@@ -28,10 +37,54 @@ th, td {
 
 footer {
     background-color: var(--cor-fundo-bege);
-    text-align: center;    
+    text-align: center;  
+    padding: 10px 0; /* Espaçamento interno */  
 }
 
-#bg-all{
+#navbar-lp{
     background-color: var(--cor-fundo-bege);
+    padding-inline: 15em;
+    border-bottom: 3px solid #E88239;
+    padding-block: 25px;
 
+}
+
+#img-logo{
+    width: 160px; 
+    height: auto;
+}
+
+#btn-entrar{
+    background-color: var(--verde-escuro);
+    border: none;
+    border-radius: 40px;
+    color: #FFFFFF;
+    font-weight: 500;
+    width: 85px;
+    height: 33px;
+    margin-block: 10px;
+    transition-duration: 0.3ms;
+}
+
+#btn-entrar:hover {
+    background-color: var(--verde-bege);
+    color: white;
+}
+
+#btn-cadastrar{
+    background-color: var(--cor-fundo-bege);
+    border: 1px solid var(--verde-escuro);
+    border-radius: 40px;
+    color: var(--verde-escuro);
+    font-weight: 600;
+    width: 127px;
+    height: 33px;
+    margin-block: 10px;
+    margin-right: 36px;
+    transition-duration: 0.3ms;
+}
+
+#btn-cadastrar:hover {
+    background-color: var(--verde-escuro);
+    color: white;
 }
