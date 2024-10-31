@@ -4,7 +4,7 @@ const router = express.Router()
 import Talhoes from "../models/Talhoes.js"
 import{where} from 'sequelize'
 
-
+//ROTA TALHÕES
 router.get("/talhoes", function(req,res){
     Talhoes.findAll().then(talhoes => {
         res.render("talhoes", {

@@ -2,7 +2,7 @@ import express from 'express';
 import Historico from "../models/Historico.js"
 const router = express.Router()
 
-// ROTA PEDIDOS
+// ROTA hISTÓRICO
 router.get("/historico", function (req, res) {
     Historico.findAll().then(historico => {
         res.render("historico", { historico })

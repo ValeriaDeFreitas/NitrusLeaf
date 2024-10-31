@@ -8,7 +8,7 @@ router.get("/login", (req, res) => {
     res.render("login");
 });
 
-//ROTA DE CADASTRO
+//ROTA DE USUÁRIOS
 
 router.get("/cadastroUsuarios", (req, res) =>{
     res.render("cadastroUsuarios");

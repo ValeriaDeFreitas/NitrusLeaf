@@ -3,7 +3,7 @@ import Configuracoes from "../models/Configuracoes.js"
 
 const router = express.Router()
 
-// ROTA HISTAL
+// ROTA CONFIGURAÇÕES
 router.get("/configuracoes", function (req, res) {
     Configuracoes.findAll().then(configuracoes => {
         res.render("configuracoes", { configuracoes: configuracoes })

@@ -3,7 +3,7 @@ import Deficiencia from "../models/Deficiencia.js"
 
 const router = express.Router()
 
-// ROTA HISTAL
+// ROTA DEFICIÊNCIA
 router.get("/deficiencia", function (req, res) {
     Deficiencia.findAll().then(deficiencia => {
         res.render("deficiencia", { deficiencia: deficiencia })

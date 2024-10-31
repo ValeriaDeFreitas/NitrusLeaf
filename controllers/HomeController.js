@@ -2,7 +2,7 @@ import express from 'express';
 import Home from "../models/Home.js"
 const router = express.Router()
 
-// ROTA PEDIDOS
+// ROTA HOME
 router.get("/home", function (req, res) {
     Home.findAll().then(home => {
         res.render("home", { home })
