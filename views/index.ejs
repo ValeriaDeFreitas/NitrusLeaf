@@ -1,32 +1,25 @@
 <%- include ('partials/header.ejs') %>
 <%- include ('partials/navbar.ejs') %>
 
-    <div class="container">
-        <div class="jumbotron">
-            <br>
-            <h1 class="display-5"><strong>Bem-vindo(a) ao painel administrativo Nossa Loja!</strong></h1>
-            <p class="lead">Através desse painel é possível listar as tabelas de clientes, produtos e pedidos.</p>
-            <hr class="my-4">
-            <p class="currentDate"></p>
-            </p>         
-            <p class="lead">
-              <a class="btn btn-info btn-lg" href="/talhoes" role="button">Verificar pedidos</a>
-            </p>
-          </div>
-        <hr>
-        <div class="card">
-            <div class="card-header">
-                <h1>Para onde deseja ir?</h1>
-            </div>
-            <div class="card-body">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/histal">Histórico dos Talhões</a></li>
-                    <li><a href="/talhoes">Talhões</a></li>
-                    <li><a href="/historico">Histórico</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
+<div class="collapse navbar-collapse" id="navbar-btns">
+    <ul class="navbar-nav mr-auto">
+      <button id="btn-cadastrar" type="button">Cadastrar-se</button>
+      <button id="btn-entrar" type="button">Entrar</button>
+      
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <div class="container">
+    <h1><strong>Diagnóstico de deficiência da sua mexerica em um piscar de olhos!</strong></h1>
+  </div>
+  <div style="display: flex; flex-direction: column;" class="container">
+    <img src="mexerica.png" alt="Mexerica">
+    <button id="btn-entrar" style="width: 246px;">Entrar</button>
+    <button id="btn-cadastrar" style="width: 246px;">Cadastrar-se</button>
+    <a href="#">Entrar com o Google</a>
+  </div>
+</main>
     
 <%- include ('partials/footer.ejs') %>
