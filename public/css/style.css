@@ -96,10 +96,19 @@ footer {
     color: white;
 }
 .wave-conteiner{
-
+    position: relative;
     width: 100%;
     height: 200px;
     background: linear-gradient(to left, #FFB534, #E88239);
     clip-path: path("M0,30 Q500,230 1000,90 T2000,80 L2000,500 L0,600 Z");
 }
+#card-conteiner-css{
 
+    align-items: center;
+}
+#card-css{
+    align-items: center;
+}
+#card-body-css{
+    width: 900px;
+}
