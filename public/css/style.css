@@ -1,0 +1,128 @@
+:root{
+    --cor-fundo-bege: #FAF0D7;
+    --cor-fundo-cor: #FFB534;
+    --verde-escuro: #49A010;
+    --verde-bege: #65B741;
+    --texto-marrom: #351102;
+    --preto: #000000;
+}
+
+#gradient-bg {
+    position: relative;
+    height: 100px;/* altura do elemento */
+    background: linear-gradient(to left, #FFB534, #E88239);
+    display: flex;
+    flex-direction: column;
+    min-height: 10vh; /* Garante que o body tenha pelo menos a altura da viewport */
+    margin: 0;
+}
+
+body {
+    background-image: url('../imgs/bg-use.png');
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: 25% 500px;
+    background-color: var(--cor-fundo-bege);
+}
+
+ul {
+    list-style: square;
+    line-height: 30px;
+}
+
+a {
+    color:#0ba7c6;
+    text-decoration: none;
+    padding: 20px;
+}
+
+th, td {
+    padding: 10px;
+}
+
+footer {
+    background-color: var(--cor-fundo-bege);
+    text-align: center;  
+    padding: 10px 0; /* Espaçamento interno */  
+    border-top: 2px solid var(--cor-fundo-bege);
+}
+
+#navbar-lp{
+    background-color: var(--cor-fundo-bege);
+    padding-inline: 15em;
+    border-bottom: 3px solid #E88239;
+    padding-block: 25px;
+
+}
+
+#navbar-btns{
+    display: flex;
+    justify-content: flex-end; /* Alinha os itens para o final da linha */
+    align-items: center;
+}
+
+#img-logo{
+    width: 160px; 
+    height: auto;
+}
+
+#btn-entrar{
+    background-color: var(--verde-escuro);
+    border: none;
+    border-radius: 40px;
+    color: #FFFFFF;
+    font-weight: 500;
+    width: 85px;
+    height: 33px;
+    margin-block: 10px;
+    transition-duration: 0.3ms;
+}
+
+#btn-entrar:hover {
+    background-color: var(--verde-bege);
+    color: white;
+}
+
+#btn-cadastrar{
+    background-color: var(--cor-fundo-bege);
+    border: 1px solid var(--verde-escuro);
+    border-radius: 40px;
+    color: var(--verde-escuro);
+    font-weight: 600;
+    width: 127px;
+    height: 33px;
+    margin-block: 10px;
+    margin-right: 36px;
+    transition-duration: 0.3ms;
+}
+
+#btn-cadastrar:hover {
+    background-color: var(--verde-escuro);
+    color: white;
+}
+.wave-conteiner{
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to left, #FFB534, #E88239);
+    clip-path: path("M0,30 Q500,230 1000,90 T2000,80 L2000,500 L0,600 Z");
+}
+#card-conteiner-css{
+display: flex;
+justify-content: center;
+}
+#card-css{
+  width: 900px;  
+  height: 900px;
+}
+#card-body-css{
+    width: 500px;
+}
+#column{
+    float:left;
+    width: 50%;
+}
+#row:after{
+    content: "";
+    display: table;
+    clear: both;
+}    
