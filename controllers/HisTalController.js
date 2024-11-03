@@ -1,5 +1,5 @@
 import express from 'express'
-import HisTal from "../models/Histal.js"
+import HisTal from "../models/HisTal.js"
 
 const router = express.Router()
 
@@ -49,7 +49,6 @@ router.post("/histal/update/:id", (req, res) => {
         {
             planta: planta,
             status: status,
-
         },
         { where: { id: id } }
     ).then(() => {
