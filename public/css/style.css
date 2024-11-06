@@ -110,7 +110,12 @@ footer {
     clip-path: path("M0,30 Q500,230 1000,90 T2000,80 L2000,500 L0,600 Z");
 }
 #card-conteiner-css{
-    align-items: center
+    align-items: center;
+}
+#text{
+    display: flex;
+    text-align:start;
+    margin-left: 20.5%;
 }
 #card-css{
     margin-left: 20%;
@@ -151,7 +156,7 @@ background-color: #FFE29B;
     width: 246px;
     height: 33px;
     margin-block: 20px;
-    margin-inline: 300px;
+    margin-inline: 370px;
     transition-duration: 0.3ms;
 }
 #btn-cadastro:hover {
