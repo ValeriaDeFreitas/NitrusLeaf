@@ -115,11 +115,11 @@ footer {
 #card-css{
     margin-left: 20%;
     display: flex;
-    width: 1000px;
+    width: 1150px;
     background-color: #FFE29B;
 }
 #card-body-css{
-    width: 900px;
+    width: 1000px;
     background-color: #FFE29B;
 }
 #row{
@@ -151,11 +151,32 @@ background-color: #FFE29B;
     width: 246px;
     height: 33px;
     margin-block: 20px;
-    margin-inline: 400px;
+    margin-inline: 300px;
     transition-duration: 0.3ms;
 }
 #btn-cadastro:hover {
     background-color: var(--verde-bege);
     color: white;
+}
+#img-navbar-lateral{
+    width: 40px;
+  
+}
+#img-div-lateral{
+margin-left: 20%;
+margin-right: 20%;
+}
+#v-pills-tab{
+    background: linear-gradient(to left, #FFB534, #E88239);
+}
+#v-pills-home-tab{
+    background: linear-gradient(to left, #FFB534, #E88239);
+}
+#v-pills-settings-tab-u{
+    margin-bottom: 100%;
+}
+#card-home{
+    width: 50px;
+    height: 70px;
 }
 

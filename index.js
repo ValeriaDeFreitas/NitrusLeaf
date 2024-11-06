@@ -11,6 +11,9 @@ import HisTalController from "./controllers/HisTalController.js"
 import TalhoesController from "./controllers/TalhoesController.js"
 import UsersController from "./controllers/UsersController.js"
 import UsuariosController from "./controllers/UsuariosController.js"
+import HomeController from "./controllers/HomeController.js"
+
+
 
 
 app.use(express.urlencoded({extended: false}))
@@ -40,6 +43,7 @@ app.use("/", HistoricoController)
 app.use("/", TalhoesController)
 app.use("/", UsersController)
 app.use("/", UsuariosController)
+app.use("/", HomeController)
 
 // ROTA PRINCIPAL
 app.get("/",function(req,res){
