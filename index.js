@@ -3,17 +3,15 @@ import express from 'express';
 // Iniciando o Express na variável app
 const app = express();
 //Importando o sequelize (com os dados da execução)
-import connection from './config/sequelize-config.js'
-// Importando os Controllers (onde estão as rotas) 
+import connection from './config/sequelize-config.js';
 
+// Importando os Controllers (onde estão as rotas) 
 import HistoricoController from "./controllers/HistoricoController.js"
 import HisTalController from "./controllers/HisTalController.js"
 import TalhoesController from "./controllers/TalhoesController.js"
 import UsersController from "./controllers/UsersController.js"
 import UsuariosController from "./controllers/UsuariosController.js"
 import HomeController from "./controllers/HomeController.js"
-
-
 
 
 app.use(express.urlencoded({extended: false}))
@@ -33,17 +31,17 @@ connection.query(`CREATE DATABASE IF NOT EXISTS mexerica;`).then(() => {
 });
 
 // Define o EJS como Renderizador de páginas
-app.set('view engine', 'ejs')
+app.set('view engine', 'ejs');
 // Define o uso da pasta "public" para uso de arquivos estáticos
-app.use(express.static('public'))
+app.use(express.static('public'));
 
 // Definindo o uso das rotas dos Controllers
-app.use("/", HisTalController)
-app.use("/", HistoricoController)
-app.use("/", TalhoesController)
-app.use("/", UsersController)
-app.use("/", UsuariosController)
-app.use("/", HomeController)
+app.use("/", HisTalController);
+app.use("/", HistoricoController);
+app.use("/", TalhoesController);
+app.use("/", UsersController);
+app.use("/", UsuariosController);
+app.use("/", HomeController);
 
 // ROTA PRINCIPAL
 app.get("/",function(req,res){
