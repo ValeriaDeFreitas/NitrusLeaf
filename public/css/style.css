@@ -7,6 +7,8 @@
     --preto: #000000;
     --input-color:#FBF6EE;
     --border-input-color:#65B741;
+    --fonte-roboto: 'Roboto', sans-serif;
+    --font-weight-bold: 700;
 }
 
 #gradient-bg {
@@ -25,6 +27,8 @@ body {
     background-repeat: no-repeat;
     background-position: 25% 400px;
     background-color: var(--cor-fundo-bege);
+    font-family: var(--fonte-roboto);
+    font-weight: var(--font-weight-bold);
 }
 
 ul {
@@ -33,7 +37,7 @@ ul {
 }
 
 a {
-    color:#0ba7c6;
+    color: var(--texto-marrom);
     text-decoration: none;
     padding: 20px;
 }
@@ -49,40 +53,34 @@ footer {
     border-top: 2px solid var(--cor-fundo-bege);
 }
 
+    
 #navbar-lp{
     background-color: var(--cor-fundo-bege);
-    padding-inline: 15em;
+    display: flex;
+    align-items: center;
+    padding-inline: 10%; 
     border-bottom: 3px solid #E88239;
-    padding-block: 25px;
+    padding-block: 1.5%;
 
+}
+
+#nav-links{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    
 }
 
 #navbar-btns{
     display: flex;
-    justify-content: flex-end; /* Alinha os itens para o final da linha */
-    align-items: center;
+    margin-left: auto; /* Alinha os itens para o final da linha */
+    align-items: center; 
 }
 
 #img-logo{
     width: 160px; 
     height: auto;
-}
-
-#btn-entrar{
-    background-color: var(--verde-escuro);
-    border: none;
-    border-radius: 40px;
-    color: #FFFFFF;
-    font-weight: 500;
-    width: 85px;
-    height: 33px;
-    margin-block: 10px;
-    transition-duration: 0.3ms;
-}
-
-#btn-entrar:hover {
-    background-color: var(--verde-bege);
-    color: white;
 }
 
 #btn-cadastrar{
@@ -91,17 +89,31 @@ footer {
     border-radius: 40px;
     color: var(--verde-escuro);
     font-weight: 600;
-    width: 127px;
-    height: 33px;
-    margin-block: 10px;
-    margin-right: 36px;
+    padding: 7px 20px;
     transition-duration: 0.3ms;
+    margin-right: 35px;
 }
 
 #btn-cadastrar:hover {
     background-color: var(--verde-escuro);
     color: white;
 }
+
+#btn-entrar{
+    background-color: var(--verde-escuro);
+    border: none;
+    border-radius: 40px;
+    color: #FFFFFF;
+    font-weight: 500;
+    padding: 7px 17px;
+    transition-duration: 0.3ms;
+}
+
+#btn-entrar:hover {
+    background-color: var(--verde-bege);
+    color: white;
+}
+
 .wave-conteiner{
     position: relative;
     width: 100%;
