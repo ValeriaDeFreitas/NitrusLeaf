@@ -1,8 +1,8 @@
 <%- include ('partials/header.ejs') %>
-    <%- include ('partials/navbar.ejs') %>
+<%- include ('partials/navbar.ejs') %>
 
         <div class="conteiner py-5">
-            <div class="container pr-5">
+            <div class="container">
                 <h2 id="text">Cadastrar</h2>
             </div>
             
@@ -32,7 +32,7 @@
                             </div>
                             <div id="column">
                                 <label>Sobrenome:</label>
-                                <input class="form-control" type="sobrenome" name="sobrenome" placeholder="obrenome"
+                                <input class="form-control" type="sobrenome" name="sobrenome" placeholder="Sobrenome"
                                     required>
                                 <br>
                                 <label>Celular:</label>
@@ -49,13 +49,17 @@
                             </div>
                         </div>
                         <br>
-                        <input type="submit" value="Cadastrar" class="btn btn-success btn-block" id="btn-cadastro">
+                        <div class="container">
+                            <input type="submit" value="Cadastrar" class="btn btn-block px-5" id="btn-entrar">
+                        </div>
                         </form>
-                        <h6>Já possui conta?<a href="/login">Faça o login</a></h6>
+                        <div class="container">
+                             <h6>Já possui conta?<a href="/login">Faça o login</a></h6>
+                        </div>                           
                     </div>
                 </div>
-            </div>
+            </div> 
         </div>
-        </div>
+    </div>
 
-        <%- include ('partials/footer.ejs') %>
+<%- include ('partials/footer.ejs') %>

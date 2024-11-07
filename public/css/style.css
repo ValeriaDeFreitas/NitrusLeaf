@@ -7,6 +7,7 @@
     --preto: #000000;
     --input-color:#FBF6EE;
     --border-input-color:#65B741;
+    --cor-fundo-form: #FFE29B;
     --background-gradient: linear-gradient(to left, #FFB534, #E88239);
     --fonte-roboto: 'Roboto', sans-serif;
     --font-weight-bold: 700;
@@ -145,7 +146,7 @@ footer {
 /* ----------- */
 
 #text{
-    margin-right: 70px;
+    margin-left: 15%;
     font-family: var(--fonte-roboto);
     font-weight: var(--font-weight-bold);
 }
@@ -153,16 +154,16 @@ footer {
     margin-left: 20%;
     display: flex;
     width: 1150px;
-    background-color: #FFE29B;
+    background-color: var(--cor-fundo-form);
 }
 #card-body-css{
     width: 1000px;
-    background-color: #FFE29B;
+    
 }
 #row{
-display: flex;
-column-gap: 100px;
-background-color: #FFE29B;
+    display: flex;
+    gap: 100px;
+    
 }
 #column{
     float: left;
