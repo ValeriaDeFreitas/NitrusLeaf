@@ -1,0 +1,220 @@
+:root{
+    --cor-fundo-bege: #FAF0D7;
+    --cor-fundo-cor: #FFB534;
+    --verde-escuro: #49A010;
+    --verde-bege: #65B741;
+    --texto-marrom: #351102;
+    --preto: #000000;
+    --input-color:#FBF6EE;
+    --border-input-color:#65B741;
+    --cor-fundo-form: #FFE29B;
+    --background-gradient: linear-gradient(to left, #FFB534, #E88239);
+    --fonte-roboto: 'Roboto', sans-serif;
+    --font-weight-bold: 700;
+}
+
+html, body {  
+    background-image: url('../imgs/bg-use.png');
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: 25% 350px;
+    background-color: var(--cor-fundo-bege);
+    font-family: var(--fonte-roboto);
+    font-weight: var(--font-weight-bold);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+
+}
+
+main {
+    flex: 1;
+}
+
+#footer {
+    background: var(--background-gradient);
+    width: 100%;
+    height: 130px;
+    padding: 20px 0;
+    border-top: 2px solid var(--cor-fundo-bege);
+    font-family: var(--fonte-roboto);
+}
+
+ul {
+    list-style: square;
+    line-height: 30px;
+}
+
+a {
+    color: var(--texto-marrom);
+    text-decoration: none;
+    padding: 20px;
+}
+
+th, td {
+    padding: 10px;
+}
+
+footer {
+    background-color: var(--cor-fundo-bege);
+    text-align: center;  
+    padding: 10px 0; /* Espaçamento interno */  
+    border-top: 2px solid var(--cor-fundo-bege);
+}
+    
+#navbar-lp{
+    background-color: var(--cor-fundo-bege);
+    display: flex;
+    align-items: center;
+    padding-inline: 10%; 
+    border-bottom: 3px solid #E88239;
+    padding-block: 1.5%;
+
+}
+
+#nav-links{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    
+}
+
+#navbar-btns{
+    display: flex;
+    margin-left: auto; /* Alinha os itens para o final da linha */
+    align-items: center; 
+    gap: 35px;
+}
+
+#img-logo{
+    width: 160px; 
+    height: auto;
+}
+
+#btn-cadastrar{
+    background-color: var(--cor-fundo-bege);
+    border: 1px solid var(--verde-escuro);
+    border-radius: 40px;
+    color: var(--verde-escuro);
+    font-weight: 600;
+    transition-duration: 0.3ms;
+    text-align: center;
+}
+
+#btn-cadastrar:hover {
+    background-color: var(--verde-escuro);
+    color: white;
+}
+
+#btn-entrar{
+    background-color: var(--verde-escuro);
+    border: none;
+    border-radius: 40px;
+    color: #FFFFFF;
+    font-weight: 500;
+    transition-duration: 0.3ms;
+    text-align: center;
+}
+
+#btn-entrar:hover {
+    background-color: var(--verde-bege);
+    color: white;
+}
+
+#wave-conteiner{
+    background: var(--background-gradient);
+    position: relative;
+    width: 100%;
+    height: 200px;
+   
+    /* clip-path: path("M0,30 Q500,230 1000,90 T2000,80 L2000,500 L0,600 Z"); */
+    clip-path: polygon(100% 100%, 0% 100% , 0.00% 10.69%, 2.50% 14.54%, 5.00% 18.95%, 7.50% 23.82%, 10.00% 29.03%, 12.50% 34.45%, 15.00% 39.94%, 17.50% 45.37%, 20.00% 50.61%, 22.50% 55.53%, 25.00% 60.00%, 27.50% 63.91%, 30.00% 67.18%, 32.50% 69.72%, 35.00% 71.46%, 37.50% 72.37%, 40.00% 72.41%, 42.50% 71.60%, 45.00% 69.95%, 47.50% 67.50%, 50.00% 64.31%, 52.50% 60.46%, 55.00% 56.05%, 57.50% 51.18%, 60.00% 45.97%, 62.50% 40.55%, 65.00% 35.06%, 67.50% 29.63%, 70.00% 24.39%, 72.50% 19.47%, 75.00% 15.00%, 77.50% 11.09%, 80.00% 7.82%, 82.50% 5.28%, 85.00% 3.54%, 87.50% 2.63%, 90.00% 2.59%, 92.50% 3.40%, 95.00% 5.05%, 97.50% 7.50%, 100.00% 10.69%);
+}
+
+#div-index{
+    margin-top: 90px;
+    
+}
+
+#btn-index{
+    padding-inline: 76px;
+    width: 436px;
+}
+
+/* ----------- */
+
+#text{
+    margin-left: 15%;
+    font-family: var(--fonte-roboto);
+    font-weight: var(--font-weight-bold);
+}
+#card-css{
+    margin-left: 20%;
+    display: flex;
+    width: 1150px;
+    background-color: var(--cor-fundo-form);
+}
+#card-body-css{
+    width: 1000px;
+    
+}
+#row{
+    display: flex;
+    gap: 100px;
+    
+}
+#column{
+    float: left;
+    width: 1000px;  
+}
+#row:after{
+    display: flex;
+    column-gap: 100px;
+    content: "";
+    display: table;
+    clear: both;
+}
+.form-control{
+    background-color:var(--input-color) ;
+    border: 2px solid var(--border-input-color) ;
+}
+#btn-cadastro{
+    background-color: var(--verde-escuro);
+    border: none;
+    border-radius: 40px;
+    color: #FFFFFF;
+    font-weight: 500;
+    width: 246px;
+    height: 33px;
+    margin-block: 20px;
+    margin-inline: 370px;
+    transition-duration: 0.3ms;
+}
+#btn-cadastro:hover {
+    background-color: var(--verde-bege);
+    color: white;
+}
+#img-navbar-lateral{
+    width: 40px;
+  
+}
+#img-div-lateral{
+margin-left: 20%;
+margin-right: 20%;
+}
+#v-pills-tab{
+    background: linear-gradient(to left, #FFB534, #E88239);
+}
+#v-pills-home-tab{
+    background: linear-gradient(to left, #FFB534, #E88239);
+}
+#v-pills-settings-tab-u{
+    margin-bottom: 100%;
+}
+#card-home{
+    width: 50px;
+    height: 70px;
+}
+

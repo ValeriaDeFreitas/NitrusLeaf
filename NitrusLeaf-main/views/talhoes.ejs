@@ -1,0 +1,65 @@
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/navbar.ejs') %>
+<!--
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    <h1>Cadastrar talhoes</h1>
+                </div>
+            
+
+                <div class="card-body">
+                    <form action="/talhoes/new" method="post">
+                        <label>Nome do Talhão:</label>
+                        <input type="text" name="nome" id="nome" placeholder="Insira o nome do talhão"
+                        class="form-control" required>
+                        <br>
+                        <label>Nome pé: </label>
+                        <input type="text" name="cpf" id="cpf" placeholder="Insira o nome do pé "
+                        class="form-control" required>
+                        <br>
+                        <input type="submit" class="btn btn-success" value="Cadastrar">
+
+                    </form>
+                    <hr>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    <h1>Talhões</h1>
+                </div>
+                <div class="card-body">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Nome do talhão:</th>
+                                <th>Nome do pé:</th>
+                                <th colspan="2">Ações: </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% talhoes.forEach(talhoes=> { %>
+                                <tr>
+                                    <td><img src="imgs/avatar.png" width="30px"></td>
+                                    <td>
+                                        <%= talhoes.nome %>
+                                    </td>
+                                    <td>
+                                        <%= talhoes.pe %>
+                                    </td>
+                                    <td><a style = "color: orange;" href="/talhoes/edit/<%= talhoes.id %>">Editar</a></td>
+                                    <td><a style = "color: red " href="/talhoes/delete/<%= talhoes.id%>" onclick="return confirm('Deseja realmente deletar o talhoes <%= talhoes.nome %>')">Deletar</a></td>
+                                </tr>
+                                <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+-->
+<%- include ('partials/footer.ejs') %>
