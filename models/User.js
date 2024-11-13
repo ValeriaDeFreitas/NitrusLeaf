@@ -1,7 +1,7 @@
 import sequelize from "sequelize";
 import connection from "../config/sequelize-config.js";
 
-const User = connection.define('users', {
+const User = connection.define('user', {
     nome:{
         type: sequelize.STRING,
         allowNull:false

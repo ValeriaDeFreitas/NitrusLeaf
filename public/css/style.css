@@ -213,8 +213,46 @@ margin-right: 20%;
 #v-pills-settings-tab-u{
     margin-bottom: 100%;
 }
-#card-home{
-    width: 50px;
-    height: 70px;
+#label{
+    margin-left: 0%;
 }
-
+#card-label{
+    background-color: var(--cor-fundo-bege);
+    border-bottom: 2px solid #49A010;
+    margin-inline: 350px;
+    margin-right: 10%;
+    border-radius: 0%;
+    border-top: transparent;
+    border-inline: transparent;
+}
+#card-home{
+    align-items: center;
+}
+#card-body-home{
+    align-items: center;
+    height: 300px;
+    width: 400px;
+}
+#card-body-home-two{
+    align-items: center;
+    height: 500px;
+    width: 200px;
+}
+#card-label{
+    margin-top: -35%;
+    margin-bottom: 5%;
+}
+#row{
+    display: flex;
+    gap: 60px;
+}
+#row-home:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+#column-home{
+    float: left;
+    margin-left: 20%;
+    column-gap: 40px;
+}
