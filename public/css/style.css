@@ -11,6 +11,10 @@
     --background-gradient: linear-gradient(to left, #FFB534, #E88239);
     --fonte-roboto: 'Roboto', sans-serif;
     --font-weight-bold: 700;
+    --graf-cobre:#D84A0F;
+    --graf-maganes:#FFB534;
+    --graf-adv:#ACACAC;
+    --graf-label:#FBF6EE;
 }
 
 html, body {  
@@ -222,29 +226,46 @@ margin-right: 20%;
     margin-inline: 350px;
     margin-right: 10%;
     border-radius: 0%;
+    margin-top: -650px;
     border-top: transparent;
     border-inline: transparent;
 }
-#card-home{
+#row-buttons{
     align-items: center;
+    display: flex;
+    margin-top: 40px;
+    margin-left: 450px;
+    gap: 100px;
+}
+#column-buttons{
+    column-gap: 40px;
+}
+#btn-scan{
+    background-color: var(--verde-escuro);
+    width: 600px;
+    height: 121px;
+}
+#btn-upload{
+    background-color: var(--verde-escuro);
+    width: 500px;
+    height: 121px;
+}
+#card-home-css{
+position: relative;
+margin-top: -390px;
+left: 400px;
 }
 #card-body-home{
-    align-items: center;
-    height: 300px;
-    width: 400px;
+    width: 600px;
+    height: 400px;
 }
 #card-body-home-two{
-    align-items: center;
-    height: 500px;
-    width: 200px;
+    width: 500px;
+    height: 400px;
 }
-#card-label{
-    margin-top: -35%;
-    margin-bottom: 5%;
-}
-#row{
+#row-home{
     display: flex;
-    gap: 60px;
+    gap: 10px;
 }
 #row-home:after{
     content: "";
@@ -253,6 +274,46 @@ margin-right: 20%;
 }
 #column-home{
     float: left;
-    margin-left: 20%;
     column-gap: 40px;
+}
+.grafico{
+    background-color: grey;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    box-shadow: -1px 1px 3px #000;
+}
+.graf {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    clip: rect(0px, 50px, 100px, 0px);
+}
+.hold {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    clip: rect(0px, 100px, 100px, 50px);
+}
+
+#grafico1 .graf {
+    background-color: var(--graf-maganes);
+    transform:rotate(150deg);
+}
+#grafico2 {
+    transform:rotate(70deg);
+}
+#grafico2 .graf {
+    background-color: var(--graf-cobre);
+    transform:rotate(150deg);
+}
+#grafico3 {
+    transform:rotate(220deg);
+}
+#grafico3 .graf {
+    background-color: var(--graf-adv);
+    transform:rotate(150deg);
 }

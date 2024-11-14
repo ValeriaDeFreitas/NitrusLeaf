@@ -2,22 +2,42 @@
 <%- include ('partials/navbar.ejs') %>
 <%- include ('partials/navbar-lateral.ejs') %>
 
-<div id="row-home" id="conteiner-home">
+<div  id="conteiner-home">
   <div class="card" id="card-label">
-  <h1 id="label">Olá, bem vindo!</h1>
+  <h1 id="label">Inicio</h1>
 </div>
-  <div id="column-home">
-  <div class="card-home mx-5" id="card-home-css">
-    <div class="card" id="card-body-home">
+  <div id="row-buttons">
+    <div id="column-buttons">
+       <input type="submit" value="Cadastrar" class="btn btn-block" id="btn-scan">
     </div>
+  <div id="column-buttons">
+        <input type="submit" value="Cad" class="btn btn-block" id="btn-upload">
+      </div>
+   </div>
   </div>
 </div>
+<div id="row-home">
   <div id="column-home">
-  <div class="card mx-5" id="card-home-css">
-    <div class="card-body" id="card-body-home-two">
-    </div>
+     <div class="card mx-5" id="card-home-css">
+  <div class="card-body" id="card-body-home">
+    <h1>Ocorrências totais em %</h1>
+    <div class="graficoContainer">
+      <div class="graficoBackground"></div>
+      <div id="grafico1" class="hold"><div class="graf"></div></div>
+      <div id="grafico2" class="hold"><div class="graf"></div></div>
+      <div id="grafico3" class="hold"><div class="graf"></div></div>
+      <div id="grafico4" class="hold"><div class="graf"></div></div>
+ </div>
+  </div>
   </div>
 </div>
+    <div id="column-home">
+      <div class="card mx-5" id="card-home-css">
+          <div class="card-body" id="card-body-home-two">
+          </div>
+      </div>
+    </div>
+    </div>
 </div>
       
 <%- include ('partials/footer.ejs') %>

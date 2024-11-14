@@ -23,7 +23,7 @@ router.post("/createUsuarios", (req,res)=>{
     const bairro = req.body.bairro;
     const cidade = req.body.cidade;
     
-    Usuarios.findOne({where:{email:email}}).then((usuarios)=>{
+    Usuarios.findOne({where:{cpf:cpf}}).then((usuarios)=>{
         if(usuarios == undefined){
             //AQUI É FEITO O CADASTRO E O HASH DE SENHA
             const salt =bcrypt.genSaltSync(10)
@@ -73,12 +73,10 @@ router.post("/authenticate", (req, res) => {
         numero:numero,
         bairro:bairro,
         cidade:cidade
-
         },
     }).then(usuarios =>{
         if(usuarios != undefined){
             res.redirect("/");
-
         }else{
             res.send(`Usuário não cadastrado. <a href="/login">Tente novamente! `);
         }
