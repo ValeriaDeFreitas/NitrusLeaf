@@ -25,10 +25,11 @@ html, body {
     background-color: var(--cor-fundo-bege);
     font-family: var(--fonte-roboto);
     font-weight: var(--font-weight-bold);
+    height: 100%;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
+    
 
 }
 
@@ -147,13 +148,18 @@ footer {
     width: 436px;
 }
 
-/* ----------- */
-
-#text{
-    margin-left: 15%;
+.transparent-container {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+}
+  
+#titulo{
     font-family: var(--fonte-roboto);
     font-weight: var(--font-weight-bold);
 }
+
+/* ----------- */
+
 #card-css{
     margin-left: 20%;
     display: flex;

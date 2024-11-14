@@ -1,65 +1,119 @@
 <%- include ('partials/header.ejs') %>
 <%- include ('partials/navbar.ejs') %>
 
-        <div class="conteiner py-5">
-            <div class="container">
-                <h2 id="text">Cadastrar</h2>
-            </div>
-            
-            <div class="card" id="card-css">
-                <div id="row">
-                    <div class="card-body mx-5 my-5" id="card-body-css">
-                        <h3>Dados da conta</h3>
-                        <form action="/createUser" method="post">
-                        <div id="row">
-                            <div id="column">
-                                <label>Nome:</label>
-                                <input class="form-control" type="nome" name="nome" placeholder="Digite seu nome"
-                                    required>
-                                <br>
-                                <label>Telefone:</label>
-                                <input class="form-control" type="telefone" name="telefone"
-                                    placeholder="Insira seu telefone" required>
-                                <br>
-                                <label>E-mail:</label>
-                                <input class="form-control" type="sobrenome" name="email"
-                                    placeholder="email@exemplo.com" required>
-                                <br>
-                                <label>Senha:</label>
-                                <input class="form-control" type="password" name="password"
-                                    placeholder="Insira uma senha com no mínimo 8 caracteres" required>
-                              
-                            </div>
-                            <div id="column">
-                                <label>Sobrenome:</label>
-                                <input class="form-control" type="sobrenome" name="sobrenome" placeholder="Sobrenome"
-                                    required>
-                                <br>
-                                <label>Celular:</label>
-                                <input class="form-control" type="celular" name="celular"
-                                    placeholder="Insira um número de celular" required>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <label>Confirmar senha:</label>
-                                <input class="form-control" type="password" name="password"
-                                    placeholder="Confirme sua senha" required>
-                                <br>
-                            </div>
+<main>
+    <div class="container mt-5">
+        <h1 id="titulo">Cadastrar</h1>
+        <div class="card mt-2">
+            <div class="card-body p-5">
+                <h4 id="titulo">Dados da conta</h4>
+                <form action="/createUser" method="post">
+                    <div class="row">
+                        <div class="col m-3">
+                            <label>Nome:</label>
+                            <input type="text" class="form-control" placeholder="Nome">
                         </div>
-                        <br>
-                        <div class="container">
-                            <input type="submit" value="Cadastrar" class="btn btn-block px-5" id="btn-entrar">
+                        <div class="col m-3">
+                            <label>Telefone:</label>
+                            <input type="text" class="form-control" placeholder="Sobrenome">
                         </div>
-                        </form>
-                        <div class="container">
-                             <h6>Já possui conta?<a href="/login">Faça o login</a></h6>
-                        </div>                           
                     </div>
-                </div>
-            </div> 
+                    <div class="row">
+                        <div class="col m-3">
+                            <label>Telefone:</label>    
+                            <input type="text" class="form-control" placeholder="Telefone">
+                        </div>
+                        <div class="col m-3">
+                            <label>Telefone:</label>  
+                            <input type="text" class="form-control" placeholder="Celular">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col m-3">
+                            <label>Telefone:</label>
+                            <input type="text" class="form-control" placeholder="Email">
+                        </div>
+                        <div class="col m-3"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col m-3">
+                            <label>Telefone:</label>
+                            <input type="text" class="form-control" placeholder="Senha">
+                        </div>
+                        <div class="col m-3"></div>
+                    </div>
+                    <div class="container text-center" >
+                        <input type="submit" value="Cadastrar" class="btn pt-2 mt-3" style="padding-inline: 7rem ;" id="btn-entrar">
+                    </div>
+                    <div class="container text-center mt-2">
+                        <h6>Já possui conta?<a href="/login">Faça o login</a></h6>
+                   </div> 
+                </form>
+
+            </div>
         </div>
     </div>
+</main>
+
+
+<!-- 
+<div class="conteiner py-5">
+    <h2 id="titulo">Cadastrar</h2>
+
+<div class="card" id="card-css">
+    <div id="row">
+        <div class="card-body mx-5 my-5" id="card-body-css">
+            <h3>Dados da conta</h3>
+            <form action="/createUser" method="post">
+            <div id="row">
+                <div id="column">
+                    <label>Nome:</label>
+                    <input class="form-control" type="nome" name="nome" placeholder="Digite seu nome"
+                        required>
+                    <br>
+                    <label>Telefone:</label>
+                    <input class="form-control" type="telefone" name="telefone"
+                        placeholder="Insira seu telefone" required>
+                    <br>
+                    <label>E-mail:</label>
+                    <input class="form-control" type="sobrenome" name="email"
+                        placeholder="email@exemplo.com" required>
+                    <br>
+                    <label>Senha:</label>
+                    <input class="form-control" type="password" name="password"
+                        placeholder="Insira uma senha com no mínimo 8 caracteres" required>
+                  
+                </div>
+                <div id="column">
+                    <label>Sobrenome:</label>
+                    <input class="form-control" type="sobrenome" name="sobrenome" placeholder="Sobrenome"
+                        required>
+                    <br>
+                    <label>Celular:</label>
+                    <input class="form-control" type="celular" name="celular"
+                        placeholder="Insira um número de celular" required>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <label>Confirmar senha:</label>
+                    <input class="form-control" type="password" name="password"
+                        placeholder="Confirme sua senha" required>
+                    <br>
+                </div>
+            </div>
+            <br>
+            <div class="container">
+                <input type="submit" value="Cadastrar" class="btn btn-block px-5" id="btn-entrar">
+            </div>
+            </form>
+            <div class="container">
+                 <h6>Já possui conta?<a href="/login">Faça o login</a></h6>
+            </div>                           
+        </div>
+    </div>
+</div> 
+</div>
+</div> -->
 
 <%- include ('partials/footer.ejs') %>
