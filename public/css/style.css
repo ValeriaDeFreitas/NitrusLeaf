@@ -260,14 +260,19 @@ margin-right: 20%;
 position: relative;
 margin-top: -390px;
 left: 400px;
+border-radius: 20px;
 }
 #card-body-home{
     width: 600px;
     height: 400px;
+    background-color: var(--cor-fundo-form);
+    border: 2px solid var(--verde-bege);
 }
 #card-body-home-two{
     width: 500px;
     height: 400px;
+    background-color: var(--cor-fundo-form);
+    border: 2px solid var(--verde-bege);
 }
 #row-home{
     display: flex;
@@ -282,44 +287,24 @@ left: 400px;
     float: left;
     column-gap: 40px;
 }
-.grafico{
-    background-color: grey;
+.graficoContainer {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    margin-right: 65%;
+  }
+  .graficoBackground {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  .porcentagem {
     position: absolute;
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
-    box-shadow: -1px 1px 3px #000;
-}
-.graf {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
-    clip: rect(0px, 50px, 100px, 0px);
-}
-.hold {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
-    clip: rect(0px, 100px, 100px, 50px);
-}
-
-#grafico1 .graf {
-    background-color: var(--graf-maganes);
-    transform:rotate(150deg);
-}
-#grafico2 {
-    transform:rotate(70deg);
-}
-#grafico2 .graf {
-    background-color: var(--graf-cobre);
-    transform:rotate(150deg);
-}
-#grafico3 {
-    transform:rotate(220deg);
-}
-#grafico3 .graf {
-    background-color: var(--graf-adv);
-    transform:rotate(150deg);
-}
+    color: #fff;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  
+  
+  
