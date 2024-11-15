@@ -9,10 +9,10 @@ router.get("/login", (req, res) => {
 });
 
 //ROTA DE CADASTRO
-
 router.get("/cadastro", (req, res) =>{
     res.render("cadastro");
 })
+
 //ROTA DE CRIAÇÃO DE USUARIOS 
 router.post("/createUser", (req,res)=>{
     const nome = req.body.nome;
