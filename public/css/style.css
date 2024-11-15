@@ -158,6 +158,20 @@ footer {
     font-weight: var(--font-weight-bold);
 }
 
+#form-bg{
+    background-color: var(--cor-fundo-form);
+}
+
+#form-bg-claro{
+    background-color: var(--cor-fundo-bege);
+    border-color: var(--border-input-color);
+}
+
+
+#tabela-dados{
+    display: flex;
+    gap: 15rem;
+}
 /* ----------- */
 
 #card-css{
@@ -170,15 +184,8 @@ footer {
     width: 1000px;
     
 }
-#row{
-    display: flex;
-    gap: 100px;
-    
-}
-#column{
-    float: left;
-    width: 1000px;  
-}
+
+
 #row:after{
     display: flex;
     column-gap: 100px;
