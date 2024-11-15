@@ -9,9 +9,9 @@ router.get("/login", (req, res) => {
     res.render("login");
 });
 
-//ROTA DE CADASTRO
-router.get("/cadastroUsuarios", (req, res) =>{
-    res.render("cadastroUsuarios");
+//ROTA DE CADASTRO USUÁRIOS
+router.get("/cadastroUsuario", (req, res) =>{
+    res.render("cadastroUsuario");
 })
 
 //ROTA DE CRIAÇÃO DE USUARIOS 
@@ -83,8 +83,6 @@ router.post("/authenticate", (req, res) => {
     })    
 
 })
-
-
 
 export default router;
 
