@@ -1,6 +1,5 @@
 import express from 'express'
-import HisTal from "../models/HisTal.js"
-
+import HisTal from "../models/Histal.js"
 const router = express.Router()
 
 // ROTA HISTAL

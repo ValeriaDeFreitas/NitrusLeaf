@@ -1,88 +1,69 @@
 <%- include ('partials/header.ejs') %>
-<%- include ('partials/navbar.ejs') %>
-<%- include ('partials/navbar-lateral.ejs') %>
+  <%- include ('partials/navbar-two.ejs') %>
+    <%- include ('partials/navbar-lateral.ejs') %>
 
-<div id="conteiner-home">
-  <div class="card" id="card-label">
-    <h1 id="label">Inicio</h1>
-  </div>
-  <div id="row-buttons">
-    <div id="column-buttons">
-      <input type="submit" value="Escanear folha" class="btn btn-block rounded-5" id="btn-scan">
-    </div>
-    <div id="column-buttons">
-      <input type="submit" value="Fazer upload" class="btn btn-block rounded-5" id="btn-upload">
-    </div>
-  </div>
-</div>
-<div id="row-home">
-  <div id="column-home">
-    <div class="card mx-5 rounded-5" id="card-home-css">
-      <div class="card-body rounded-5" id="card-body-home">
-        <h4>Ocorrências totais em %</h4>
-        <div class="graficoContainer">
-          <!-- O gráfico de pizza será desenhado neste div -->
-          <div class="graficoBackground" id="grafico-pizza"></div>
+      <div id="conteiner-home">
+        <div class="card" id="row-elements">
+          <div id="column-elements">
+            <h1 id="label">Inicio</h1>
+          </div>
+          <div id="column-elements-two">
+            <div id="dropdown">
+              <label for="options"></label>
+              <select id="options">
+                <option value="">Carregando...</option> <!-- Texto inicial enquanto as opções estão sendo carregadas -->
+              </select>
+              <%-include ('partials/script-dropdown')%>
+            </div>
+          </div>
         </div>
-        <script>
-          const dados = [19, 43, 38]; // Total: 100%
-          const cores = ['#D84A0F', '#ACACAC', '#FFB534'];
-
-          function criarGraficoPizza(dados, cores) {
-            const somaTotal = dados.reduce((acc, val) => acc + val, 0);
-            if (somaTotal !== 100) {
-              console.error('A soma dos dados deve ser 100%');
-              return;
-            }
-
-            let acumulado = 0;
-            const fatias = dados.map((valor, index) => {
-              const inicio = acumulado;
-              acumulado += valor;
-              return `${cores[index]} ${inicio}% ${acumulado}%`;
-            });
-
-            const grafico = document.getElementById('grafico-pizza');
-            grafico.style.background = `conic-gradient(${fatias.join(', ')})`;
-            adicionarPorcentagens(dados);
-          }
-
-          function adicionarPorcentagens(dados) {
-            const container = document.querySelector('.graficoContainer');
-            let acumulado = 0;
-
-            dados.forEach((valor, index) => {
-              const anguloInicial = acumulado;
-              acumulado += valor;
-              const anguloCentral = anguloInicial + valor / 2;
-
-              const radiano = (anguloCentral * 4.0 * Math.PI) / 180;
-              const x = 50 + 35 * Math.cos(radiano);
-              const y = 50 + 35 * Math.sin(radiano);
-
-              const porcentagem = document.createElement('div');
-              porcentagem.classList.add('porcentagem');
-              porcentagem.textContent = `${valor}%`;
-              porcentagem.style.left = `${x}%`;
-              porcentagem.style.top = `${y}%`;
-              porcentagem.style.transform = `translate(-15px , -26px)`;
-
-              container.appendChild(porcentagem);
-            });
-          }
-          criarGraficoPizza(dados, cores);
-        </script>
-        <div id="legenda">
-        <div></div>         
+        <div id="row-buttons">
+          <div id="column-buttons">
+            <a href="/scanner">
+              <button class="btn btn-block rounded-5" id="btn-scan">Escanear Folha</button>
+            </a>
+            <!--<div id="resultMessage">
+              <p id="message"></p>
+            </div>
+            <script src="script.js"></script>-->
+            <!--Para o scanner funcionar ir no tunderclient/ 
+            new request/ selecionar metodo post e colocar a 
+            url do localhost-->
+          </div>
+          <div id="column-buttons">
+            <form action="/upload" class="card rounded-5" method="POST" enctype="multipart/form-data" id="upload-form">
+              <!-- O label vai ser o botão de escolha de arquivo -->
+              <label for="btn-upload-one" id="custom-file-upload">
+                <input type="file" name="file" id="btn-upload-one" style="display: none;" />
+                <input type="submit" value="Fazer upload" class="btn btn-block rounded-5" id="btn-upload-two">
+              </label>
+              <!-- O input de arquivo é escondido -->
+            </form>
+            <%- include ('partials/upload.ejs') %>
+          </div>
+        </div>
+        <div id="row-home">
+          <div id="column-home">
+            <div class="card mx-5 rounded-5" id="card-home-css">
+              <div class="card-body rounded-5" id="card-body-home">
+                <h4>Ocorrências totais em %</h4>
+                <div class="graficoContainer">
+                  <!-- O gráfico de pizza será desenhado neste div -->
+                  <div class="graficoBackground" id="grafico-pizza"></div>
+                </div>
+                <%-include ('partials/script-grafico')%>
+                  <div id="legenda" class="legenda"></div>
+                  <%-include ('partials/script-legenda')%>
+                    <input type="submit" value="Detalhar" class="btn btn-block rounded-3" id="btn-detalhar" />
+              </div>
+            </div>
+          </div>
+          <div id="column-home">
+            <div class="card mx-5 rounded-5" id="card-home-css">
+              <div class="card-body rounded-5" id="card-body-home-two">
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div id="column-home">
-    <div class="card mx-5 rounded-5" id="card-home-css">
-      <div class="card-body rounded-5" id="card-body-home-two">
-      </div>
-    </div>
-  </div>
-</div>
-<%- include ('partials/footer.ejs') %>
+      <%- include ('partials/footer-two.ejs') %>

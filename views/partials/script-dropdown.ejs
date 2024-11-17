@@ -1,0 +1,26 @@
+<script>
+    // Função para carregar as opções da dropdown
+    async function loadOptions() {
+        try {
+            // Fazendo uma requisição para obter as opções do servidor
+            const response = await fetch('/options');
+            const options = await response.json();
+
+            const selectElement = document.getElementById('options');
+            selectElement.innerHTML = '';  // Limpando a opção "Carregando..."
+
+            // Adicionando as opções no select
+            options.forEach(option => {
+                const optionElement = document.createElement('option');
+                optionElement.value = option.value;
+                optionElement.textContent = option.label;
+                selectElement.appendChild(optionElement);
+            });
+        } catch (error) {
+            console.error('Erro ao carregar opções:', error);
+        }
+    }
+
+    // Carregar as opções assim que a página for carregada
+    window.onload = loadOptions;
+</script>

@@ -1,0 +1,32 @@
+<script>
+    // Função para criar a legenda com textos
+    function criarLegenda(textos, cores) {
+        const legendaContainer = document.getElementById('legenda');
+        textos.forEach((texto, index) => {
+            const legendaItem = document.createElement('div');
+            legendaItem.classList.add('legenda-item');
+
+            // Cor da fatia
+            const cor = document.createElement('div');
+            cor.classList.add('cor');
+            cor.style.backgroundColor = cores[index];
+
+            // Texto personalizado
+            const textoElemento = document.createElement('span');
+            textoElemento.textContent = texto;  // Exibe o texto personalizado
+
+            // Adiciona a cor e o texto à legenda
+            legendaItem.appendChild(cor);
+            legendaItem.appendChild(textoElemento);
+
+            legendaContainer.appendChild(legendaItem);
+        });
+    }
+
+    // Exemplo de dados e cores
+    const textos = ["Categoria A", "Categoria B", "Categoria C", "Categoria D"];
+    const cores = ["#FF5733", "#33FF57", "#3357FF", "#F3F33F"];
+
+    // Criar a legenda com textos personalizados e cores
+    criarLegenda(textos, cores);
+</script>
